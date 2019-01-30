@@ -45,8 +45,17 @@ html,body{
     box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52)
 }
 
+.card-form{
+    display: inline-block;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52)
+}
+
 .box-detail{
-    background: #018394;
+    background: #2E3192;
     color: #FFF;
     width: 100%;
     height: 250px;
@@ -58,6 +67,20 @@ html,body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.box-relative{
+    position: relative;
+    display: inline-block;
+    margin: 35px 0 25px;
+}
+.box-title{
+    padding: 15px 20px;
+    background: #DD2476;
+    color: #FFF;
+    font-size: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-left: 8px solid #2E3192;
 }
 
 .header{
@@ -72,10 +95,10 @@ html,body{
 
 .form-control, .form-control:active{
     outline: 0;
-    background: #dddddd;
-    width: 100%;
+    background-color: #f6f6f6;
     border: 0;
-    padding: 20px 15px;
+    width: 100%;
+    padding: 25px 15px;
     box-sizing: border-box;
     box-shadow: none !important;
     font-size: 16px;
@@ -99,7 +122,7 @@ html,body{
 .btn-info{
     width: 100%;
     padding: 15px;
-    background-color: #018394;
+    background-color: #2E3192;
     color: #eee;
     font-size: 16px;
     border: none;
@@ -108,29 +131,23 @@ html,body{
     transition: .5s;
 }
 
-.btn-info:hover{
-    background-color: #018394;
+.btn-info:hover, .btn-info:active, .btn-info:focus{
+    background-color: #2E3192;
 }
 
 .table{
-    margin-top: 100px;
+    margin-top: 30px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 thead{
     background: #df5090;
-    color: #222;
+    color: #FFF;
 }
 .table>tbody>tr>td{
     border: none;
 }
-tbody tr:nth-child(even){
-    background: #222 !important;
-    color: #FFF;
-}
-tbody tr:nth-child(odd){
-    background: #4e4e4e !important;
-    color: #FFF;
-}
+
 
 footer{
     position: absolute;

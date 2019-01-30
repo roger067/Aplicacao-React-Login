@@ -8,16 +8,16 @@ class Login extends React.Component {
   /*state = {
 
   }*/
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     console.log(e);
-  }
+  };
   render() {
     return (
       <BgLogin>
         <div className="container">
           <div className="row">
             <div className="col-sm-4 col-sm-offset-4">
-              <Card>
+              <Card title="Login">
                 <form onSubmit={this.handleSubmit}>
                   <Inputs
                     typeInput="email"
@@ -29,7 +29,12 @@ class Login extends React.Component {
                     idInput="inputPassword"
                     placeholder="Senha..."
                   />
-                  <Buttons typeButton="submit" nameButton="Entrar" link="/UserPage" classButton="btn-primary"/>
+                  <Buttons
+                    typeButton="submit"
+                    nameButton="Entrar"
+                    link="/UserPage"
+                    classButton="btn-primary"
+                  />
                 </form>
               </Card>
             </div>
