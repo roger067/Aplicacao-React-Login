@@ -46,13 +46,18 @@ html,body{
 }
 
 .box-detail{
-    background: #157bce;
+    background: #018394;
+    color: #FFF;
     width: 100%;
     height: 250px;
     padding: 20px;
     margin-top: 100px;
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .header{
@@ -91,9 +96,38 @@ html,body{
 .btn-primary:hover{
     background-color: #dd2443;
 }
+.btn-info{
+    width: 100%;
+    padding: 15px;
+    background-color: #018394;
+    color: #eee;
+    font-size: 16px;
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.btn-info:hover{
+    background-color: #018394;
+}
 
 .table{
     margin-top: 100px;
+}
+
+thead{
+    background: #df5090;
+    color: #222;
+}
+
+tbody tr:nth-child(even){
+    background: #222 !important;
+    color: #FFF;
+}
+tbody tr:nth-child(odd){
+    background: #4e4e4e !important;
+    color: #FFF;
 }
 
 footer{

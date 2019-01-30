@@ -2,7 +2,7 @@ import React from "react";
 
 const Table = props => {
   return (
-    <table className="table table-bordered">
+    <table className="table table-striped">
       <thead>
         <tr>
           <th>ID</th>

@@ -5,6 +5,12 @@ import Inputs from "../../components/Inputs";
 import Buttons from "../../components/Buttons";
 
 class Login extends React.Component {
+  /*state = {
+
+  }*/
+  handleSubmit = (e) => {
+    console.log(e);
+  }
   render() {
     return (
       <BgLogin>
@@ -12,7 +18,7 @@ class Login extends React.Component {
           <div className="row">
             <div className="col-sm-4 col-sm-offset-4">
               <Card>
-                <form action ="">
+                <form onSubmit={this.handleSubmit}>
                   <Inputs
                     typeInput="email"
                     idInput="inputEmail"
@@ -23,7 +29,7 @@ class Login extends React.Component {
                     idInput="inputPassword"
                     placeholder="Senha..."
                   />
-                  <Buttons typeButton="submit" nameButton="Entrar" link="/UserPage"/>
+                  <Buttons typeButton="submit" nameButton="Entrar" link="/UserPage" classButton="btn-primary"/>
                 </form>
               </Card>
             </div>
