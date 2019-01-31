@@ -33,7 +33,7 @@ const Navbar = props => {
               </li>
               <li>
                 <Link to={props.linkTwo}>
-                  <span className="glyphicon glyphicon-log-in" /> Produtos
+                  <span className="glyphicon glyphicon-shopping-cart" /> Produtos
                 </Link>
               </li>
               <li>

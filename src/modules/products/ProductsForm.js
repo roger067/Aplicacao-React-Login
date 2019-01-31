@@ -1,12 +1,31 @@
 import React from "react";
+import { Field, reduxForm } from "redux-form";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Card from "../../components/Card";
 import BoxTitle from "../../components/BoxTitle";
-import Inputs from "../../components/Inputs";
-import Buttons from "../../components/Buttons";
+//import Inputs from "../../components/Inputs";
+//import Buttons from "../../components/Buttons";
 
 class ProductsAdd extends React.Component {
+  renderInput({ input, placeholder, type }) {
+    return (
+      <div className="form-group">
+        <input
+          type={type}
+          className="form-control"
+          {...input}
+          placeholder={placeholder}
+          required
+        />
+      </div>
+    );
+  }
+
+  onSubmit(formProps) {
+    console.log(formProps);
+  }
+
   render() {
     return (
       <div>
@@ -14,37 +33,37 @@ class ProductsAdd extends React.Component {
         <div className="container">
           <BoxTitle title="Adicione um Produto" />
           <Card title="">
-            <div className="row">
-              <div className="col-sm-12">
-                <Inputs
-                  typeInput="text"
-                  idInput="inputProductName"
-                  placeholder="Digite o nome do Produto"
-                />
+            <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
+              <div className="row">
+                <div className="col-sm-12 col-xs-12">
+                  <Field
+                    name="inputProduct"
+                    component={this.renderInput}
+                    type="text"
+                    placeholder="Digite o Produto..."
+                  />
+                </div>
+                <div className="col-sm-6 col-xs-12">
+                  <Field
+                    name="inputPrice"
+                    component={this.renderInput}
+                    type="text"
+                    placeholder="Digite o Preço..."
+                  />
+                </div>
+                <div className="col-sm-6 col-xs-12">
+                  <Field
+                    name="inputDate"
+                    component={this.renderInput}
+                    type="text"
+                    placeholder="Digite a Data de Validade..."
+                  />
+                </div>
+                <div className="col-sm-3 col-sm-offset-9">
+                  <button className="btn btn-info">Confirmar</button>
+                </div>
               </div>
-              <div className="col-sm-6">
-                <Inputs
-                  typeInput="text"
-                  idInput="inputPrice"
-                  placeholder="Digite o preço"
-                />
-              </div>
-              <div className="col-sm-6">
-                <Inputs
-                  typeInput="text"
-                  idInput="inputDate"
-                  placeholder="Digite a Data"
-                />
-              </div>
-              <div className="col-sm-3 col-sm-offset-9">
-                <Buttons
-                  link="/ProductsForm"
-                  typeButton="button"
-                  nameButton="Confirmar"
-                  classButton="btn-info"
-                />
-              </div>
-            </div>
+            </form>
           </Card>
         </div>
         <Footer />
@@ -53,4 +72,6 @@ class ProductsAdd extends React.Component {
   }
 }
 
-export default ProductsAdd;
+export default reduxForm({
+  form: "UserForm"
+})(ProductsAdd);

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Thambi|Raleway');
+
 html,body{
     height: 100%;
 }
@@ -18,21 +20,23 @@ html,body{
     padding: 12px 0px;
 }
 .nav-brand {
+    font-family: 'Baloo Thambi', cursive;
     float: left;
     height: 50px;
     padding: 15px 15px;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 20px;
     color: #FFF !important;
 }
 .navbar-inverse .navbar-nav>li>a {
+    font-family: 'Raleway', sans-serif;
     background: #DD2476;
     color: #FFF;
     margin-left: 8px;
     border-radius: 10px;
     transition: .5s;
 }
-.navbar-inverse .navbar-nav>li>a:hover {
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
     background: #dd2443;
 }
 
@@ -56,7 +60,7 @@ html,body{
 
 .card-info{
     width: 100%;
-    margin-top: 20px;
+    margin: 10px 0px;
     display: inline-block;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
@@ -66,12 +70,16 @@ html,body{
     border-bottom: 5px solid #2E3192;
     padding: 15px;
     color: #FFF;
+    font-family: 'Baloo Thambi', cursive;
     font-size: 18px;
 }
 .card-body{
     width: 100%;
     background: #FFF;
     padding: 10px 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
 }
 .card-footer{
     padding: 5px 20px 15px;
@@ -81,6 +89,7 @@ html,body{
     color: #FFF;
     font-size: 32px;
     width: 100%;
+    font-family: 'Raleway', sans-serif;
     padding: 15px 25px;
     margin-top: 50px;
     margin-bottom: 50px; 
@@ -100,6 +109,7 @@ html,body{
     font-size: 20px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     border-left: 8px solid #2E3192;
+    font-family: 'Baloo Thambi', cursive;
 }
 
 .header{
@@ -120,7 +130,12 @@ html,body{
     padding: 25px 15px;
     box-sizing: border-box;
     box-shadow: none !important;
+    font-family: 'Raleway', sans-serif;
     font-size: 16px;
+}
+
+.btn{
+    font-family: 'Baloo Thambi', cursive;
 }
 
 .btn-primary{
@@ -134,7 +149,6 @@ html,body{
     text-transform: uppercase;
     transition: .5s;
 }
-
 .btn-primary:hover{
     background-color: #dd2443;
 }
@@ -149,7 +163,6 @@ html,body{
     text-transform: uppercase;
     transition: .5s;
 }
-
 .btn-info:hover, .btn-info:active, .btn-info:focus{
     background-color: #2E3192;
 }
@@ -161,16 +174,15 @@ html,body{
     border: none;
     transition: .5s;
 }
-
 .btn-success:hover, .btn-success:active, .btn-success:focus{
     background-color: #24dd4c;
 }
 
 .table{
+    font-family: 'Raleway', sans-serif;
     margin-top: 30px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
-
 thead{
     background: #df5090;
     color: #FFF;
@@ -179,7 +191,6 @@ thead{
     border: none;
 }
 
-
 footer{
     position: absolute;
     bottom: 0;
@@ -187,6 +198,7 @@ footer{
     background: #222;
     color: #DD2476;
     text-align: center;
+    font-family: 'Raleway', sans-serif;
     padding: 20px;
     font-size: 13px
 }
@@ -195,7 +207,6 @@ footer{
     .navbar-inverse .navbar-nav>li>a {
         margin:5px 15px;
     }
-
     .table-responsive {
         border: none
     }
