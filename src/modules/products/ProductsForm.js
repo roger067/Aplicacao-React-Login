@@ -56,7 +56,7 @@ class ProductsAdd extends React.Component {
                     name="inputDate"
                     component={this.renderInput}
                     type="text"
-                    placeholder="Digite a Data de Validade..."
+                    placeholder="Data de Validade (dd/mm/aaaa)"
                   />
                 </div>
                 <div className="col-sm-3 col-sm-offset-9">

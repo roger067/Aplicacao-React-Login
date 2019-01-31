@@ -17,26 +17,28 @@ class Login extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col-sm-4 col-sm-offset-4">
-              <Card title="Login">
-                <form onSubmit={this.handleSubmit}>
-                  <Inputs
-                    typeInput="email"
-                    idInput="inputEmail"
-                    placeholder="E-mail..."
-                  />
-                  <Inputs
-                    typeInput="password"
-                    idInput="inputPassword"
-                    placeholder="Senha..."
-                  />
-                  <Buttons
-                    typeButton="submit"
-                    nameButton="Entrar"
-                    link="/UserPage"
-                    classButton="btn-primary"
-                  />
-                </form>
-              </Card>
+              <div className="animated fadeInLeft">
+                <Card title="Login">
+                  <form onSubmit={this.handleSubmit}>
+                    <Inputs
+                      typeInput="email"
+                      idInput="inputEmail"
+                      placeholder="E-mail..."
+                    />
+                    <Inputs
+                      typeInput="password"
+                      idInput="inputPassword"
+                      placeholder="Senha..."
+                    />
+                    <Buttons
+                      typeButton="submit"
+                      nameButton="Entrar"
+                      link="/UserPage"
+                      classButton="btn-primary"
+                    />
+                  </form>
+                </Card>
+              </div>
             </div>
           </div>
         </div>
