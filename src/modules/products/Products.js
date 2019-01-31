@@ -14,12 +14,21 @@ class Products extends React.Component {
         <div className="container">
           <BoxTitle title="Produtos em Estoque" />
           <Tabel>
-            <Tbody />
+            <Tbody>
+              <Buttons
+                link="/UserForm"
+                typeButton="button"
+                icon="glyphicon glyphicon-edit"
+                nameButton=" Editar"
+                classButton="btn-success"
+              />
+            </Tbody>
           </Tabel>
           <Buttons
             link="/ProductsForm"
             typeButton="button"
-            nameButton="Adicionar Produto"
+            icon="glyphicon glyphicon-plus"
+            nameButton=" Adicionar Produto"
             classButton="btn-info"
           />
         </div>

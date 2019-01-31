@@ -14,12 +14,21 @@ class User extends React.Component {
         <div className="container">
           <BoxTitle title="Lista de Usuários" />
           <Tabel>
-            <Tbody />
+            <Tbody>
+              <Buttons
+                link="/UserUpdate"
+                typeButton="button"
+                icon="glyphicon glyphicon-edit"
+                nameButton=" Editar"
+                classButton="btn-success"
+              />
+            </Tbody>
           </Tabel>
           <Buttons
             link="/UserForm"
             typeButton="button"
-            nameButton="Adicionar Usuário"
+            icon="glyphicon glyphicon-plus"
+            nameButton=" Adicionar Usuário"
             classButton="btn-info"
           />
         </div>

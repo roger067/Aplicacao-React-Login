@@ -4,6 +4,7 @@ import Login from '../modules/auth/Login';
 import UserPage from '../modules/users/UserPage';
 import User from '../modules/users/User';
 import UserForm from '../modules/users/UserForm';
+import UserUpdate from '../modules/users/UserUpdate';
 import Products from '../modules/products/Products';
 import ProductsForm from '../modules/products/ProductsForm';
 
@@ -14,6 +15,7 @@ export default () => (
             <Route exact path='/UserPage' component={UserPage} />
             <Route exact path='/User' component={User} />
             <Route exact path='/UserForm' component={UserForm} />
+            <Route exact path='/UserUpdate' component={UserUpdate} />
             <Route exact path='/Products' component={Products} />
             <Route exact path='/ProductsForm' component={ProductsForm} />
             <Redirect from="*" to="/" />

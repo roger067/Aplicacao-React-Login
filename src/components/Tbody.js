@@ -9,6 +9,7 @@ const Tbody = props => {
         <td>john@example.com</td>
         <td>Doe</td>
         <td>Doe</td>
+        <td>{props.children}</td>
       </tr>
       <tr>
         <td>2</td>
@@ -16,6 +17,7 @@ const Tbody = props => {
         <td>Moe</td>
         <td>mary@example.com</td>
         <td>Doe</td>
+        <td>{props.children}</td>
       </tr>
       <tr>
         <td>3</td>
@@ -23,6 +25,7 @@ const Tbody = props => {
         <td>Dooley</td>
         <td>july@example.com</td>
         <td>Doe</td>
+        <td>{props.children}</td>
       </tr>
     </tbody>
   );

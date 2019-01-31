@@ -54,19 +54,38 @@ html,body{
     box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52)
 }
 
+.card-info{
+    width: 100%;
+    margin-top: 20px;
+    display: inline-block;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.card-header{
+    width: 100%;
+    background: #DD2476;
+    border-bottom: 5px solid #2E3192;
+    padding: 15px;
+    color: #FFF;
+    font-size: 18px;
+}
+.card-body{
+    width: 100%;
+    background: #FFF;
+    padding: 10px 20px;
+}
+.card-footer{
+    padding: 5px 20px 15px;
+}
 .box-detail{
     background: #2E3192;
     color: #FFF;
+    font-size: 32px;
     width: 100%;
-    height: 250px;
-    padding: 20px;
-    margin-top: 100px;
-    border-radius: 10px;
+    padding: 15px 25px;
+    margin-top: 50px;
+    margin-bottom: 50px; 
+    border-radius: 0px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .box-relative{
@@ -134,6 +153,18 @@ html,body{
 .btn-info:hover, .btn-info:active, .btn-info:focus{
     background-color: #2E3192;
 }
+.btn-success{
+    padding: 3px 8px;
+    background-color: #24dd4c;
+    color: #eee;
+    font-size: 16px;
+    border: none;
+    transition: .5s;
+}
+
+.btn-success:hover, .btn-success:active, .btn-success:focus{
+    background-color: #24dd4c;
+}
 
 .table{
     margin-top: 30px;
@@ -156,6 +187,16 @@ footer{
     background: #222;
     color: #DD2476;
     text-align: center;
-    padding: 15px;
-    font-size: 12px
+    padding: 20px;
+    font-size: 13px
+}
+
+@media (max-width: 724px) {
+    .navbar-inverse .navbar-nav>li>a {
+        margin:5px 15px;
+    }
+
+    .table-responsive {
+        border: none
+    }
 }

@@ -6,7 +6,7 @@ import BoxTitle from "../../components/BoxTitle";
 import Inputs from "../../components/Inputs";
 import Buttons from "../../components/Buttons";
 
-class UserUpdate extends React.Component {
+class UserAdd extends React.Component {
   render() {
     return (
       <div>
@@ -60,4 +60,4 @@ class UserUpdate extends React.Component {
   }
 }
 
-export default UserUpdate;
+export default UserAdd;

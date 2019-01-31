@@ -5,7 +5,7 @@ const Buttons = props => {
   return (
     <Link to={props.link}>
       <button type={props.typeButton} className={`btn ${props.classButton}`}>
-        {props.nameButton}
+        <i className={`fa ${props.icon}`}></i>{props.nameButton}
       </button>
     </Link>
   );

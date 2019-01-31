@@ -6,16 +6,16 @@ import BoxTitle from "../../components/BoxTitle";
 import Inputs from "../../components/Inputs";
 import Buttons from "../../components/Buttons";
 
-class ProductsAdd extends React.Component {
+class UserUpdate extends React.Component {
   render() {
     return (
       <div>
         <Navbar linkOne="/User" linkTwo="/Products" />
         <div className="container">
-          <BoxTitle title="Adicione um Produto" />
+          <BoxTitle title="Editar Usuário" />
           <Card title="">
             <div className="row">
-              <div className="col-sm-12">
+            <div className="col-sm-12">
                 <Inputs
                   typeInput="text"
                   idInput="inputProductName"
@@ -38,9 +38,9 @@ class ProductsAdd extends React.Component {
               </div>
               <div className="col-sm-3 col-sm-offset-9">
                 <Buttons
-                  link="/ProductsForm"
+                  link="/UserUpdate"
                   typeButton="button"
-                  nameButton="Confirmar"
+                  nameButton="Atualizar"
                   classButton="btn-info"
                 />
               </div>
@@ -53,4 +53,4 @@ class ProductsAdd extends React.Component {
   }
 }
 
-export default ProductsAdd;
+export default UserUpdate;
