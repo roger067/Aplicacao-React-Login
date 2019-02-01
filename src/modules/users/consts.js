@@ -1,0 +1,6 @@
+export const FETCH_START = 'USER_FETCH_START';
+export const FETCH_FAIL = 'USER_FETCH_FAIL';
+export const USER_FETCHED = 'USER_FETCHED';
+export const USER_SAVED = 'USER_SAVED';
+export const USER_DELETED = 'USER_DELETED';
+export const USERS_LIST_FETCHED = 'USERS_LIST_FETCHED';

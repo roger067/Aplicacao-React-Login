@@ -17,7 +17,7 @@ const Navbar = props => {
               <span className="icon-bar" />
               <span className="icon-bar" />
             </button>
-            <Link to="/UserPage">
+            <Link to="/home">
               <div className="nav-brand">PlasticApp</div>
             </Link>
           </div>

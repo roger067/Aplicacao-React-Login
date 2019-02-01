@@ -5,7 +5,7 @@ import BoxDetail from "../../components/BoxDetail";
 import CardInfo from "../../components/CardInfo";
 import Buttons from "../../components/Buttons";
 
-class UserPage extends React.Component {
+class HomePage extends React.Component {
   render() {
     return (
       <div>
@@ -45,4 +45,4 @@ class UserPage extends React.Component {
   }
 }
 
-export default UserPage;
+export default HomePage;

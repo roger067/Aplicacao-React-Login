@@ -33,7 +33,7 @@ class Login extends React.Component {
                     <Buttons
                       typeButton="submit"
                       nameButton="Entrar"
-                      link="/UserPage"
+                      link="/home"
                       classButton="btn-primary"
                     />
                   </form>

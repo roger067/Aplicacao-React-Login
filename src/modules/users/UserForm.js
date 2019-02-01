@@ -1,15 +1,21 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
 import { connect } from "react-redux";
-import { ActionCreate } from "./ActionCreate";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Card from "../../components/Card";
 import BoxTitle from "../../components/BoxTitle";
-//import Inputs from "../../components/Inputs";
-//import Buttons from "../../components/Buttons";
+import { save, getById } from './userAction';
 
-class UserAdd extends React.Component {
+class UserForm extends React.Component {
+  componentDidMount() {
+    const { id } = this.props.match.params;
+
+    if (id) {
+      this.props.getById(id);
+    }
+  }
+
   renderInput({input, placeholder, type}) {
     return (
       <div className="form-group">
@@ -20,8 +26,12 @@ class UserAdd extends React.Component {
     );
   }
 
-  onSubmit(formProps) {
-    console.log(formProps);
+  onSubmit = async formProps => {
+    const response = await this.props.save(formProps);
+
+    if (response) {
+      this.props.history.push('/User');
+    }
   }
 
   render() {
@@ -34,16 +44,16 @@ class UserAdd extends React.Component {
             <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
               <div className="row">
                 <div className="col-sm-12 col-xs-12">
-                  <Field name="inputEmail" component={this.renderInput} type="email" placeholder="Digite o e-mail..."/>
+                  <Field name="email" component={this.renderInput} type="email" placeholder="Digite o e-mail..."/>
                 </div>
                 <div className="col-sm-12 col-xs-12">
-                  <Field name="inputName" component={this.renderInput} type="text" placeholder="Digite o nome..."/>
+                  <Field name="name" component={this.renderInput} type="text" placeholder="Digite o nome..."/>
                 </div>
                 <div className="col-sm-12 col-xs-12">
-                  <Field name="inputPassword" component={this.renderInput} type="password" placeholder="Digite a senha..."/>
+                  <Field name="password" component={this.renderInput} type="password" placeholder="Digite a senha..."/>
                 </div>
                 <div className="col-sm-12 col-xs-12">
-                  <Field name="inputPhone" component={this.renderInput} type="text" placeholder="Digite o Telefone..."/>
+                  <Field name="phoneNumber" component={this.renderInput} type="text" placeholder="Digite o Telefone..."/>
                 </div>
                 <div className="col-sm-3 col-sm-offset-9">
                   <button className="btn btn-info">Confirmar</button>
@@ -58,6 +68,10 @@ class UserAdd extends React.Component {
   }
 }
 
-export default reduxForm({
-  form: "UserForm"
-})(UserAdd);
+UserForm = reduxForm({ form: "UserForm", destroyOnUnmount: true })(UserForm);
+
+const mapStateToProps = state => ({
+  initialValues: state.users.user
+});
+
+export default connect(mapStateToProps, { save, getById })(UserForm);
