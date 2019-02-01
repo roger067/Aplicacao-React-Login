@@ -40,7 +40,7 @@ class ProductsPage extends React.Component {
           { message && this.renderMessage(message) }
           { loading
               ? this.renderLoading()
-              : <div className="table-responsive">
+              : <div className="scroll-table table-responsive">
                   <table className="table table-striped">
                     <thead>
                       <tr>

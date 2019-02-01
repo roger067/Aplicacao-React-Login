@@ -27,7 +27,7 @@ export default (state = initialState, action) => {
         case USER_DELETED:
             return { ...state, loading: false, message: action.payload };
         case USERS_LIST_FETCHED:
-            return { ...state, loading: false, message: null, list: action.payload };
+            return { ...state, loading: false, message: null, list: action.payload, user: null };
         default:
             return { ...state };
     }

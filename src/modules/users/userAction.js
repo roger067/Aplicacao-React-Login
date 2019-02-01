@@ -80,8 +80,8 @@ export const deleteItem = id => {
 const fetchError = (dispatch, error) => {
     let message;
 
-	if (error && error.data && error.data.msg) {
-		message = error.data.msg;
+	if (error && error.data && error.data.errors) {
+		message = error.data.errors.join('\n');
 	} else {
 		message = 'Ocorreu um erro... Tente novamente.';
     }

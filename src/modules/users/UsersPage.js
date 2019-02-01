@@ -40,24 +40,22 @@ class UsersPage extends React.Component {
           { message && this.renderMessage(message) }
           { loading
               ? this.renderLoading()
-              : <div className="table-responsive">
+              : <div className="scroll-table table-responsive">
                   <table className="table table-striped">
                     <thead>
                       <tr>
                         <th>Nome</th>
                         <th>E-mail</th>
                         <th>Telefone</th>
-                        <th>Produtos</th>
                         <th>Action</th>
                       </tr>
                     </thead>
                     <tbody>
                       { users.map(user => (
-                        <tr>
+                        <tr key={user._id}>
                           <td>{user.name}</td>
                           <td>{user.email}</td>
                           <td>{user.phoneNumber}</td>
-                          <td></td>
                           <td>
                             <Buttons
                               link={`/UserForm/${user._id}`}
